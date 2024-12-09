@@ -1,0 +1,46 @@
+.topic-custom-field-input {
+  max-width: 100%;
+
+  &.small {
+    width: 150px;
+  }
+
+  &.large {
+    width: 475px;
+  }
+}
+
+.topic-custom-field-textarea {
+  max-width: 100%;
+  width: 465px;
+}
+
+// A custom button for the referenced process with a transparent background and a purple outline
+// /connectors/topic-title/topic-custom-field-topic-title.hbs
+.referenced-button {
+  display: inline-flex;
+  gap: 5px;
+  align-items: center;
+  padding: 4px 8px;
+  margin: 10px 0px;
+  color: white;
+  background-color: white;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.referenced-button:hover {
+  // background-color: #6e42c120;
+  border: #6f42c1 2px solid;
+  box-shadow: rgba(0, 0, 0, 0.166) -2px 5px 10px;
+}
+
+.referenced-icon {
+  // scales the fabu icon
+  width: 30px; 
+  height: 30px;
+}

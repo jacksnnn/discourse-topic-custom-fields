@@ -1,0 +1,5 @@
+en:
+  js:
+    topic_custom_field:
+      label: "%{field}: %{value}"
+      placeholder: "enter process url or process id"
