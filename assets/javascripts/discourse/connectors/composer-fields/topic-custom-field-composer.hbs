@@ -1,5 +1,5 @@
 {{!-- {{#unless this.reply}} --}}
-{{#if this.isNew && this.action === "create" && !this.reply }}
+{{#if validPost}}
 <TopicCustomFieldInput
   @fieldValue={{this.fieldValue}}
   @onChangeField={{this.onChangeField}}

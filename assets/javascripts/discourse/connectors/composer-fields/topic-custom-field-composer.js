@@ -13,6 +13,10 @@ export default class TopicCustomFieldComposer extends Component {
   @alias("composerModel.isNew") isNew;
   @alias("composerModel.action") currentAction;
 
+  @equal("composerModel.currentAction", "create") isCreateAction;
+  @not("reply") isNotReply;
+  @and("composerModel.isNew", "isCreateAction", "isNotReply") validPost;
+  
   constructor() {
     super(...arguments);
     if (
