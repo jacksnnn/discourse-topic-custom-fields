@@ -10,6 +10,8 @@ export default class TopicCustomFieldComposer extends Component {
   @alias("composerModel.topic") topic;
   @alias("composerModel.replyingToTopic") reply;
   @alias("composerModel.canEditTitle") canEditTitle;
+  @alias("composerModel.isNew") isNew;
+  @alias("composerModel.action") currentAction;
 
   constructor() {
     super(...arguments);
@@ -17,8 +19,8 @@ export default class TopicCustomFieldComposer extends Component {
       !this.composerModel[this.fieldName] &&
       this.topic &&
       this.topic[this.fieldName] &&
-      !this.reply &&
-      this.canEditTitle == false
+      !this.reply 
+      // && this.canEditTitle == false
     ) {
       const processUrl = this.transformToUrl(this.topic[this.fieldName]);
       this.composerModel.set(this.fieldName, processUrl);
