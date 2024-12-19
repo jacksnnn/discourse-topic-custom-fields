@@ -56,6 +56,12 @@ export default class TopicCustomFieldComposer extends Component {
   @action
   onChangeField(fieldValue) {
     const processUrl = this.transformToUrl(fieldValue);
+    console.log("processUrl", processUrl);
+    console.log("fieldValue", fieldValue);
+    console.log("this.fieldName", this.fieldName);
+    console.log("this.composerModel", this.composerModel);
+    console.log("this.composerModel.topic", this.composerModel.topic);
+    console.log("this.composerModel.replyingToTopic", this.composerModel.replyingToTopic);
     if (processUrl) {
       this.fieldValue = processUrl;
       this.composerModel.set(this.fieldName, processUrl);
