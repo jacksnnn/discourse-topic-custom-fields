@@ -20,12 +20,14 @@ export default class TopicCustomFieldEditTopic extends Component {
   @alias("composerModel.topic") topic;
   @alias("composerModel.replyingToTopic") reply;
   @alias("composerModel.canEditTitle") canEditTitle;
+  @alias("composerModel.editingFirstPost") editingFirstPost;
 
 
   constructor() {
     super(...arguments);
     console.log("TopicModel:", this.topicModel);
     console.log("Can Edit Title:", this.canEditTitle);
+    console.log("Editing First Post:", this.editingFirstPost);
     if (
       !this.canEditTitle
     )

@@ -12,6 +12,8 @@ export default class TopicCustomFieldComposer extends Component {
   @alias("composerModel.canEditTitle") canEditTitle;
   @alias("composerModel.isNew") isNew;
   @alias("composerModel.action") currentAction;
+  @alias("composerModel.editingFirstPost") editingFirstPost;
+
 
   constructor() {
     super(...arguments);
@@ -62,10 +64,11 @@ export default class TopicCustomFieldComposer extends Component {
     console.log("fieldValue", fieldValue);
     console.log("this.fieldName", this.fieldName);
     console.log("this.composerModel", this.composerModel);
-    console.log("this.composerModel.topic", this.composerModel.topic);
+    console.log("this.composerModel.topic", this.topic);
     console.log("this.composerModel.replyingToTopic", this.composerModel.replyingToTopic);
     console.log("this.composerModel.action", this.composerModel.currentAction);
     console.log("this.composerModel.isNew", this.composerModel.isNew);
+    console.log("this.composerModel.editingFirstPost", this.editingFirstPost);
     if (processUrl) {
       this.fieldValue = processUrl;
       this.composerModel.set(this.fieldName, processUrl);
