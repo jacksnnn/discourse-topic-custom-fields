@@ -21,6 +21,7 @@ export default class TopicCustomFieldEditTopic extends Component {
   @alias("composerModel.replyingToTopic") reply;
   @alias("composerModel.canEditTitle") canEditTitle;
 
+
   constructor() {
     super(...arguments);
     console.log("TopicModel:", this.topicModel);
