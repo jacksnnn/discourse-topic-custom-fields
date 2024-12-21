@@ -13,6 +13,7 @@ export default class TopicCustomFieldComposer extends Component {
   @alias("composerModel.isNew") isNew;
   @alias("composerModel.action") currentAction;
   @alias("composerModel.editingFirstPost") editingFirstPost;
+  @alias("composerModel.editingPost") editingPost;
 
 
   constructor() {

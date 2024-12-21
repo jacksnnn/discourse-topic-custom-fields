@@ -1,8 +1,9 @@
-{{#if this.isNew}}
-  {{#unless this.reply}}
-    <TopicCustomFieldInput
-      @fieldValue={{this.fieldValue}}
-      @onChangeField={{this.onChangeField}}
-    />
-  {{/unless}}
+{{#if (or
+        (and (not this.editingPost) this.isNew (not this.reply))
+        (and this.editingPost this.editingFirstPost)
+      )}}
+  <TopicCustomFieldInput
+    @fieldValue={{this.fieldValue}}
+    @onChangeField={{this.onChangeField}}
+  />
 {{/if}}
