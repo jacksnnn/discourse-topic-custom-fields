@@ -35,9 +35,9 @@ export default class TopicCustomFieldEditTopic extends Component {
 
   @action
   onChangeField(fieldValue) {
-    console.log("TopicModel:", this.topicModel);
-    console.log("Can Edit Title:", this.canEditTitle);
-    console.log("Editing First Post:", this.editingFirstPost);
+    // console.log("TopicModel:", this.topicModel);
+    // console.log("Can Edit Title:", this.canEditTitle);
+    // console.log("Editing First Post:", this.editingFirstPost);
     this.args.outletArgs.buffered.set(this.fieldName, fieldValue);
   }
 }
