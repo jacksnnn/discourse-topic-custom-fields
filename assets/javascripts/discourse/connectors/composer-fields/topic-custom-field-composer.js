@@ -17,15 +17,15 @@ export default class TopicCustomFieldComposer extends Component {
 
   constructor() {
     super(...arguments);
-    if (
-      !this.composerModel[this.fieldName] &&
-      this.topic &&
-      this.topic[this.fieldName] &&
-      !this.reply 
-    ) {
-      const processUrl = this.transformToUrl(this.topic[this.fieldName]);
-      this.composerModel.set(this.fieldName, processUrl);
-      this.fieldValue = processUrl;
+    const isEditingFirstPost = this.currentAction === "edit" && this.editingFirstPost;
+    const isNewTopicPost = this.isNew && !this.reply;
+    if ((isNewTopicPost || isEditingFirstPost) && this.topic && this.topic[this.fieldName]) {
+      // If the composer doesn’t already have the field set, set it:
+      if (!this.composerModel[this.fieldName]) {
+        const processUrl = this.transformToUrl(this.topic[this.fieldName]);
+        this.composerModel.set(this.fieldName, processUrl);
+        this.fieldValue = processUrl;
+      }
     }
   }
 
