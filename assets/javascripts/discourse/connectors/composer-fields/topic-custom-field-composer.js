@@ -22,7 +22,6 @@ export default class TopicCustomFieldComposer extends Component {
       this.topic &&
       this.topic[this.fieldName] &&
       !this.reply 
-      // && this.canEditTitle == false
     ) {
       const processUrl = this.transformToUrl(this.topic[this.fieldName]);
       this.composerModel.set(this.fieldName, processUrl);

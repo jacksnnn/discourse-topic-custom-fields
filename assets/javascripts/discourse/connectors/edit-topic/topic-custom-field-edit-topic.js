@@ -25,7 +25,8 @@ export default class TopicCustomFieldEditTopic extends Component {
   constructor() {
     super(...arguments);
     if (
-      !this.canEditTitle
+      !this.canEditTitle &&
+      !this.reply && !this.editingFirstPost
     )
     this.fieldValue = this.args.outletArgs.model.get(this.fieldName);
   }
