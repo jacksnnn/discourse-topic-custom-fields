@@ -24,12 +24,14 @@ export default class TopicCustomFieldEditTopic extends Component {
 
   constructor() {
     super(...arguments);
-    if (
-      !this.canEditTitle &&
-      !this.reply && !this.editingFirstPost
-    )
+    // Only set `fieldValue` if we know we are editing the first post
+    if ( this.editingFirstPost && this.canEditTitle ) {
     this.fieldValue = this.args.outletArgs.model.get(this.fieldName);
+  } else{
+    // Don't set 'fieldValue' if we are not editing the first post
+    this.fieldValue = null;
   }
+}
 
   @action
   onChangeField(fieldValue) {

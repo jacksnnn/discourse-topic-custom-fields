@@ -1,10 +1,6 @@
-{{#if this.fieldValue }}
-  {{#unless this.reply}}
-    {{#if this.editingFirstPost}}
+{{#if (and this.editingFirstPost this.canEditTitle)}}
       <TopicCustomFieldInput
         @fieldValue={{this.fieldValue}}
         @onChangeField={{this.onChangeField}}
       />
-    {{/if}}
-  {{/unless}}
 {{/if}}
